@@ -1,23 +1,22 @@
-from locadora import *
+from locadoraV4 import *
 from operacoesbd import *
 
 opcao = 6
 
-conexao = abrirBancoDados('localhost', 'root', '12345', 'novalocadora')
+conexao = abrirBancoDados('localhost', 'root', '12345', 'locadorav4')
 
 while opcao != 5:
-
     opcao = menu()
 
     if opcao == 1:
         listarFilmes(conexao)
 
     elif opcao == 2:
-        inserirFilmes(conexao)
+        inserirNovoFilme(conexao)
 
     elif opcao == 3:
         listarFilmes(conexao)
-        pesquisarCodigo(conexao)
+        pesquisarPeloCodigo(conexao)
 
     elif opcao == 4:
         listarFilmes(conexao)
@@ -25,4 +24,7 @@ while opcao != 5:
 
 encerrarBancoDados(conexao)
 
-print('Obrigado por utilizar a locadora V3, volte sempre!')
+print('Obrigado por utilizar a locadora V4, volte sempre!')
+
+
+
